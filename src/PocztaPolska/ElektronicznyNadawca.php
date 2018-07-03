@@ -348,14 +348,6 @@ class ElektronicznyNadawca extends \SoapClient
             $this->__setSoapHeaders($options['headers']);
         }
 
-        if (!$wsdl) {
-            $wsdl = realpath(__DIR__.'/../../'.self::WSDL_FILE);
-        }
-
-        if (!file_exists($wsdl)) {
-            $wsdl = realpath(__DIR__.'/../../'.$wsdl);
-        }
-
         parent::__construct($wsdl, $options);
     }
 
